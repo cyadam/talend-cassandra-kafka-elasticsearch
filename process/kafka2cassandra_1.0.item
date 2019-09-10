@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="cassandra_group" prompt="cassandra_group?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="cassandra"/>
+    <contextParameter comment="" name="group_cassandra" prompt="group_cassandra?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="cassandra"/>
     <contextParameter comment="" name="cassandra_host" prompt="cassandra_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1"/>
     <contextParameter comment="" name="cassandra_port" prompt="cassandra_port?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="9042"/>
     <contextParameter comment="" name="column_family" prompt="column_family?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
@@ -9,7 +9,7 @@
     <contextParameter comment="" name="kafka_host" prompt="kafka_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1:9092"/>
     <contextParameter comment="" name="keyspace" prompt="keyspace?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
     <contextParameter comment="" name="local" prompt="local?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="2019-01-31-LA_TRANSITION_ECOLOGIQUE.csv"/>
-    <contextParameter comment="" name="topic" prompt="topic?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
+    <contextParameter comment="" name="topic_cassandra" prompt="topic_cassandra?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat_cassandra"/>
     <contextParameter comment="" name="url" prompt="url?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="http://opendata.auth-6f31f706db6f4a24b55f42a6a79c5086.storage.sbg5.cloud.ovh.net/2019-01-31/LA_TRANSITION_ECOLOGIQUE.csv"/>
     <contextParameter comment="" name="zookeeper_host" prompt="zookeeper_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1:2181"/>
   </context>
@@ -156,8 +156,8 @@
     <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_1_1_0" show="false"/>
     <elementParameter field="TEXT" name="ZOOKEEPER_CONNECT" value="&quot;zk1:port1,zk2:port2,...&quot;" show="false"/>
     <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;host1:port1,host2:port2,...&quot;" show="false"/>
-    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="context.topic"/>
-    <elementParameter field="TEXT" name="GROUP_ID" value="context.cassandra_group"/>
+    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="context.topic_cassandra"/>
+    <elementParameter field="TEXT" name="GROUP_ID" value="context.group_cassandra"/>
     <elementParameter field="CHECK" name="RESET_OFFSET" value="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTO_OFFSET_RESET" value="LARGEST" show="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTO_OFFSET_RESET_NEW" value="EARLIEST"/>
@@ -556,7 +556,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
@@ -577,7 +577,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>

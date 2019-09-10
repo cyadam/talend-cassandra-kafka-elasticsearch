@@ -118,9 +118,9 @@ public class opendata2kafkaIteration implements TalendJob {
 
 		public void synchronizeContext() {
 
-			if (cassandra_group != null) {
+			if (group_cassandra != null) {
 
-				this.setProperty("cassandra_group", cassandra_group.toString());
+				this.setProperty("group_cassandra", group_cassandra.toString());
 
 			}
 
@@ -166,9 +166,9 @@ public class opendata2kafkaIteration implements TalendJob {
 
 			}
 
-			if (topic != null) {
+			if (topic_cassandra != null) {
 
-				this.setProperty("topic", topic.toString());
+				this.setProperty("topic_cassandra", topic_cassandra.toString());
 
 			}
 
@@ -186,10 +186,10 @@ public class opendata2kafkaIteration implements TalendJob {
 
 		}
 
-		public String cassandra_group;
+		public String group_cassandra;
 
-		public String getCassandra_group() {
-			return this.cassandra_group;
+		public String getGroup_cassandra() {
+			return this.group_cassandra;
 		}
 
 		public String cassandra_host;
@@ -234,10 +234,10 @@ public class opendata2kafkaIteration implements TalendJob {
 			return this.local;
 		}
 
-		public String topic;
+		public String topic_cassandra;
 
-		public String getTopic() {
-			return this.topic;
+		public String getTopic_cassandra() {
+			return this.topic_cassandra;
 		}
 
 		public String url;
@@ -507,9 +507,9 @@ public class opendata2kafkaIteration implements TalendJob {
 				 * [tForeach_1 begin ] start
 				 */
 
-				int NB_ITERATE_tWarn_1 = 0; // for statistics
-
 				int NB_ITERATE_tRunJob_1 = 0; // for statistics
+
+				int NB_ITERATE_tWarn_1 = 0; // for statistics
 
 				ok_Hash.put("tForeach_1", false);
 				start_Hash.put("tForeach_1", System.currentTimeMillis());
@@ -704,8 +704,8 @@ public class opendata2kafkaIteration implements TalendJob {
 					context.synchronizeContext();
 					class ContextProcessor_tRunJob_1 {
 						private void transmitContext_0() {
-							parentContextMap_tRunJob_1.put("cassandra_group", context.cassandra_group);
-							paraList_tRunJob_1.add("--context_type " + "cassandra_group" + "=" + "id_String");
+							parentContextMap_tRunJob_1.put("group_cassandra", context.group_cassandra);
+							paraList_tRunJob_1.add("--context_type " + "group_cassandra" + "=" + "id_String");
 							parentContextMap_tRunJob_1.put("cassandra_host", context.cassandra_host);
 							paraList_tRunJob_1.add("--context_type " + "cassandra_host" + "=" + "id_String");
 							parentContextMap_tRunJob_1.put("cassandra_port", context.cassandra_port);
@@ -720,8 +720,8 @@ public class opendata2kafkaIteration implements TalendJob {
 							paraList_tRunJob_1.add("--context_type " + "keyspace" + "=" + "id_String");
 							parentContextMap_tRunJob_1.put("local", context.local);
 							paraList_tRunJob_1.add("--context_type " + "local" + "=" + "id_String");
-							parentContextMap_tRunJob_1.put("topic", context.topic);
-							paraList_tRunJob_1.add("--context_type " + "topic" + "=" + "id_String");
+							parentContextMap_tRunJob_1.put("topic_cassandra", context.topic_cassandra);
+							paraList_tRunJob_1.add("--context_type " + "topic_cassandra" + "=" + "id_String");
 							parentContextMap_tRunJob_1.put("url", context.url);
 							paraList_tRunJob_1.add("--context_type " + "url" + "=" + "id_String");
 							parentContextMap_tRunJob_1.put("zookeeper_host", context.zookeeper_host);
@@ -1862,8 +1862,8 @@ public class opendata2kafkaIteration implements TalendJob {
 			}
 			class ContextProcessing {
 				private void processContext_0() {
-					context.setContextType("cassandra_group", "id_String");
-					context.cassandra_group = (String) context.getProperty("cassandra_group");
+					context.setContextType("group_cassandra", "id_String");
+					context.group_cassandra = (String) context.getProperty("group_cassandra");
 					context.setContextType("cassandra_host", "id_String");
 					context.cassandra_host = (String) context.getProperty("cassandra_host");
 					context.setContextType("cassandra_port", "id_String");
@@ -1878,8 +1878,8 @@ public class opendata2kafkaIteration implements TalendJob {
 					context.keyspace = (String) context.getProperty("keyspace");
 					context.setContextType("local", "id_String");
 					context.local = (String) context.getProperty("local");
-					context.setContextType("topic", "id_String");
-					context.topic = (String) context.getProperty("topic");
+					context.setContextType("topic_cassandra", "id_String");
+					context.topic_cassandra = (String) context.getProperty("topic_cassandra");
 					context.setContextType("url", "id_String");
 					context.url = (String) context.getProperty("url");
 					context.setContextType("zookeeper_host", "id_String");
@@ -1899,8 +1899,8 @@ public class opendata2kafkaIteration implements TalendJob {
 
 		// get context value from parent directly
 		if (parentContextMap != null && !parentContextMap.isEmpty()) {
-			if (parentContextMap.containsKey("cassandra_group")) {
-				context.cassandra_group = (String) parentContextMap.get("cassandra_group");
+			if (parentContextMap.containsKey("group_cassandra")) {
+				context.group_cassandra = (String) parentContextMap.get("group_cassandra");
 			}
 			if (parentContextMap.containsKey("cassandra_host")) {
 				context.cassandra_host = (String) parentContextMap.get("cassandra_host");
@@ -1923,8 +1923,8 @@ public class opendata2kafkaIteration implements TalendJob {
 			if (parentContextMap.containsKey("local")) {
 				context.local = (String) parentContextMap.get("local");
 			}
-			if (parentContextMap.containsKey("topic")) {
-				context.topic = (String) parentContextMap.get("topic");
+			if (parentContextMap.containsKey("topic_cassandra")) {
+				context.topic_cassandra = (String) parentContextMap.get("topic_cassandra");
 			}
 			if (parentContextMap.containsKey("url")) {
 				context.url = (String) parentContextMap.get("url");
@@ -2147,6 +2147,6 @@ public class opendata2kafkaIteration implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 62108 characters generated by Talend Open Studio for Big Data on the
- * September 10, 2019 at 9:19:40 AM UTC
+ * 62258 characters generated by Talend Open Studio for Big Data on the
+ * September 10, 2019 at 11:04:35 AM UTC
  ************************************************************************************************/

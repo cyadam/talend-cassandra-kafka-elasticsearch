@@ -15,8 +15,6 @@
     <module>jobs/process/kafka2cassandra_1.0</module>
     <module>jobs/process/cassandra2kafka_1.0</module>
     <module>jobs/process/opendata2kafkaiteration_0.1</module>
-    <module>jobs/process/la_transition_ecologique_1_0.1</module>
-    <module>jobs/process/la_transition_ecologique_2_0.1</module>
     <module>jobs/process/kafka2elasticsearch_1.0</module>
   </modules>
   <properties>

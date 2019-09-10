@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="cassandra_group" prompt="cassandra_group?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="cassandra"/>
     <contextParameter comment="" name="cassandra_host" prompt="cassandra_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1"/>
     <contextParameter comment="" name="cassandra_port" prompt="cassandra_port?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="9042"/>
     <contextParameter comment="" name="column_family" prompt="column_family?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
     <contextParameter comment="" name="data" prompt="data?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="/home/form-bd/data/"/>
+    <contextParameter comment="" name="group_elasticsearch" prompt="group_elasticsearch?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="elasticsearch"/>
     <contextParameter comment="" name="kafka_host" prompt="kafka_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1:9092"/>
     <contextParameter comment="" name="keyspace" prompt="keyspace?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
     <contextParameter comment="" name="local" prompt="local?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="2019-01-31-LA_TRANSITION_ECOLOGIQUE.csv"/>
-    <contextParameter comment="" name="topic" prompt="topic?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
+    <contextParameter comment="" name="topic_elasticsearch" prompt="topic_elasticsearch?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat_elasticsearch"/>
     <contextParameter comment="" name="url" prompt="url?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="http://opendata.auth-6f31f706db6f4a24b55f42a6a79c5086.storage.sbg5.cloud.ovh.net/2019-01-31/LA_TRANSITION_ECOLOGIQUE.csv"/>
     <contextParameter comment="" name="zookeeper_host" prompt="zookeeper_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1:2181"/>
   </context>
@@ -145,9 +145,9 @@
     <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_1_1_0" show="false"/>
     <elementParameter field="TEXT" name="ZOOKEEPER_CONNECT" value="&quot;zk1:port1,zk2:port2,...&quot;" show="false"/>
     <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;host1:port1,host2:port2,...&quot;" show="false"/>
-    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="context.topic"/>
-    <elementParameter field="TEXT" name="GROUP_ID" value="context.cassandra_group"/>
-    <elementParameter field="CHECK" name="RESET_OFFSET" value="true"/>
+    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="context.topic_elasticsearch"/>
+    <elementParameter field="TEXT" name="GROUP_ID" value="context.group_elasticsearch"/>
+    <elementParameter field="CHECK" name="RESET_OFFSET" value="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTO_OFFSET_RESET" value="LARGEST" show="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTO_OFFSET_RESET_NEW" value="EARLIEST"/>
     <elementParameter field="CLOSED_LIST" name="KAFKA_OFFSET_STORAGE" value="ZOOKEEPER" show="false"/>
@@ -370,9 +370,9 @@
     <elementParameter field="CHECK" name="SPLIT_LIST" value="true" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tExtractJSONFields_1">
-      <column comment="" key="true" length="-1" name="theme" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="theme" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="true" length="-1" name="reference" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="reference" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="title" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="createdAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="publishedAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" type="id_Date" usefulColumn="true"/>
@@ -588,9 +588,9 @@
     </elementParameter>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="indice"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="theme"/>
       <elementValue elementRef="INPUT_COLUMN" value="theme"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="id"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="reference"/>
       <elementValue elementRef="INPUT_COLUMN" value="reference"/>
     </elementParameter>
     <elementParameter field="CHECK" name="REMOVE_ROOT" value="true"/>
@@ -598,16 +598,16 @@
     <elementParameter field="CHECK" name="QUOTE_ALL_VALUES" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWriteJSONField_1">
+      <column comment="" key="false" length="-1" name="theme" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="reference" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="indice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_1" show="false"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="&#x9;&#x9;RestHighLevelClient client = new RestHighLevelClient(&#xA;&#x9;&#x9;&#x9;&#x9;RestClient.builder(new HttpHost(&quot;localhost&quot;, 9200, &quot;http&quot;), new HttpHost(&quot;localhost&quot;, 9201, &quot;http&quot;)));&#xA;&#x9;&#x9;Logger logger = LogManager.getLogger(&quot;Loader&quot;);&#xA;&#x9;&#x9;BulkProcessor.Listener listener = new BulkProcessor.Listener() {&#xA;&#x9;&#x9;&#x9;@Override&#xA;&#x9;&#x9;&#x9;public void beforeBulk(long executionId, BulkRequest request) {&#xA;&#x9;&#x9;&#x9;&#x9;int numberOfActions = request.numberOfActions();&#xA;&#x9;&#x9;&#x9;&#x9;logger.info(&quot;Executing bulk [{}] with {} requests&quot;, executionId, numberOfActions);&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;@Override&#xA;&#x9;&#x9;&#x9;public void afterBulk(long executionId, BulkRequest request, BulkResponse response) {&#xA;&#x9;&#x9;&#x9;&#x9;if (response.hasFailures()) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;logger.warn(&quot;Bulk [{}] executed with failures&quot;, executionId);&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;logger.info(&quot;Bulk [{}] completed in {} milliseconds&quot;, executionId, response.getTook().getMillis());&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;@Override&#xA;&#x9;&#x9;&#x9;public void afterBulk(long executionId, BulkRequest request, Throwable failure) {&#xA;&#x9;&#x9;&#x9;&#x9;logger.error(&quot;Failed to execute bulk&quot;, failure);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;};&#xA;&#x9;&#x9;BulkProcessor.Builder builder = BulkProcessor.builder(&#xA;&#x9;&#x9;&#x9;&#x9;(request, bulkListener) -> client.bulkAsync(request, RequestOptions.DEFAULT, bulkListener), listener);&#xA;&#x9;&#x9;builder.setBulkActions(5000);&#xA;&#x9;&#x9;builder.setBulkSize(new ByteSizeValue(100L, ByteSizeUnit.MB));&#xA;&#x9;&#x9;builder.setConcurrentRequests(0);&#xA;&#x9;&#x9;builder.setFlushInterval(TimeValue.timeValueSeconds(10L));&#xA;&#x9;&#x9;builder.setBackoffPolicy(BackoffPolicy.constantBackoff(TimeValue.timeValueSeconds(1L), 3));&#xA;&#x9;&#x9;BulkProcessor bulkProcessor = builder.build();"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#x9;&#x9;IndexRequest one = new IndexRequest(row3.indice).id(row3.id).source(row3.json.replace(&quot;[]&quot;,&quot;\&quot;\&quot;&quot;),XContentType.JSON);&#xA;&#x9;&#x9;bulkProcessor.add(one);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#x9;&#x9;IndexRequest one = new IndexRequest(row3.indice).id(row3.theme+&quot;-&quot;+row3.reference).source(row3.json.replace(&quot;[]&quot;,&quot;\&quot;\&quot;&quot;),XContentType.JSON);&#xA;&#x9;&#x9;bulkProcessor.add(one);"/>
     <elementParameter field="MEMO_JAVA" name="CODE_END" value="&#x9;&#x9;bulkProcessor.awaitClose(30L, TimeUnit.SECONDS);&#xA;&#x9;&#x9;bulkProcessor.close();&#xA;&#x9;&#x9;client.close();"/>
     <elementParameter field="CHECK" name="Version_V2_0" value="false" show="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" value="false" show="false"/>
@@ -645,7 +645,10 @@
       <elementValue elementRef="TRACE_COLUMN" value="json"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN" value="theme"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="reference"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

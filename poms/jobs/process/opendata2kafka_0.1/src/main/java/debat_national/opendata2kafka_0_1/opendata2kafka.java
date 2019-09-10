@@ -127,9 +127,9 @@ protected static void logIgnoredError(String message, Throwable cause) {
 
 		public void synchronizeContext(){
 			
-			if(cassandra_group != null){
+			if(group_cassandra != null){
 				
-					this.setProperty("cassandra_group", cassandra_group.toString());
+					this.setProperty("group_cassandra", group_cassandra.toString());
 				
 			}
 			
@@ -175,9 +175,9 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(topic != null){
+			if(topic_cassandra != null){
 				
-					this.setProperty("topic", topic.toString());
+					this.setProperty("topic_cassandra", topic_cassandra.toString());
 				
 			}
 			
@@ -195,9 +195,9 @@ protected static void logIgnoredError(String message, Throwable cause) {
 			
 		}
 
-public String cassandra_group;
-public String getCassandra_group(){
-	return this.cassandra_group;
+public String group_cassandra;
+public String getGroup_cassandra(){
+	return this.group_cassandra;
 }
 public String cassandra_host;
 public String getCassandra_host(){
@@ -227,9 +227,9 @@ public String local;
 public String getLocal(){
 	return this.local;
 }
-public String topic;
-public String getTopic(){
-	return this.topic;
+public String topic_cassandra;
+public String getTopic_cassandra(){
+	return this.topic_cassandra;
 }
 public String url;
 public String getUrl(){
@@ -11338,7 +11338,7 @@ row3.serializedValue = row2.value.replace("[]","\"\"").getBytes();
 
 
 
-tKafkaOutput_1_kafkaProducer.send(new org.apache.kafka.clients.producer.ProducerRecord<byte[], byte[]>(context.topic, row3.serializedValue), new org.apache.kafka.clients.producer.Callback() {
+tKafkaOutput_1_kafkaProducer.send(new org.apache.kafka.clients.producer.ProducerRecord<byte[], byte[]>(context.topic_cassandra, row3.serializedValue), new org.apache.kafka.clients.producer.Callback() {
 	public void onCompletion(org.apache.kafka.clients.producer.RecordMetadata metadata, Exception e) {
 		if (e != null) {
 			tKafkaOutput_1_producerExceptions.add(e);
@@ -12290,7 +12290,7 @@ row9.serializedValue = row8.value.replace("[]","\"\"").getBytes();
 
 
 
-tKafkaOutput_2_kafkaProducer.send(new org.apache.kafka.clients.producer.ProducerRecord<byte[], byte[]>(context.topic, row9.serializedValue), new org.apache.kafka.clients.producer.Callback() {
+tKafkaOutput_2_kafkaProducer.send(new org.apache.kafka.clients.producer.ProducerRecord<byte[], byte[]>(context.topic_cassandra, row9.serializedValue), new org.apache.kafka.clients.producer.Callback() {
 	public void onCompletion(org.apache.kafka.clients.producer.RecordMetadata metadata, Exception e) {
 		if (e != null) {
 			tKafkaOutput_2_producerExceptions.add(e);
@@ -12799,8 +12799,8 @@ if(null != tKafkaOutput_2_kafkaProducerToClose) {
             }
             class ContextProcessing {
                 private void processContext_0() {
-                        context.setContextType("cassandra_group", "id_String");
-                            context.cassandra_group=(String) context.getProperty("cassandra_group");
+                        context.setContextType("group_cassandra", "id_String");
+                            context.group_cassandra=(String) context.getProperty("group_cassandra");
                         context.setContextType("cassandra_host", "id_String");
                             context.cassandra_host=(String) context.getProperty("cassandra_host");
                         context.setContextType("cassandra_port", "id_String");
@@ -12815,8 +12815,8 @@ if(null != tKafkaOutput_2_kafkaProducerToClose) {
                             context.keyspace=(String) context.getProperty("keyspace");
                         context.setContextType("local", "id_String");
                             context.local=(String) context.getProperty("local");
-                        context.setContextType("topic", "id_String");
-                            context.topic=(String) context.getProperty("topic");
+                        context.setContextType("topic_cassandra", "id_String");
+                            context.topic_cassandra=(String) context.getProperty("topic_cassandra");
                         context.setContextType("url", "id_String");
                             context.url=(String) context.getProperty("url");
                         context.setContextType("zookeeper_host", "id_String");
@@ -12834,8 +12834,8 @@ if(null != tKafkaOutput_2_kafkaProducerToClose) {
         }
 
         // get context value from parent directly
-        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("cassandra_group")) {
-                context.cassandra_group = (String) parentContextMap.get("cassandra_group");
+        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("group_cassandra")) {
+                context.group_cassandra = (String) parentContextMap.get("group_cassandra");
             }if (parentContextMap.containsKey("cassandra_host")) {
                 context.cassandra_host = (String) parentContextMap.get("cassandra_host");
             }if (parentContextMap.containsKey("cassandra_port")) {
@@ -12850,8 +12850,8 @@ if(null != tKafkaOutput_2_kafkaProducerToClose) {
                 context.keyspace = (String) parentContextMap.get("keyspace");
             }if (parentContextMap.containsKey("local")) {
                 context.local = (String) parentContextMap.get("local");
-            }if (parentContextMap.containsKey("topic")) {
-                context.topic = (String) parentContextMap.get("topic");
+            }if (parentContextMap.containsKey("topic_cassandra")) {
+                context.topic_cassandra = (String) parentContextMap.get("topic_cassandra");
             }if (parentContextMap.containsKey("url")) {
                 context.url = (String) parentContextMap.get("url");
             }if (parentContextMap.containsKey("zookeeper_host")) {
@@ -13096,6 +13096,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     385037 characters generated by Talend Open Studio for Big Data 
- *     on the September 10, 2019 at 9:19:40 AM UTC
+ *     385177 characters generated by Talend Open Studio for Big Data 
+ *     on the September 10, 2019 at 11:04:35 AM UTC
  ************************************************************************************************/

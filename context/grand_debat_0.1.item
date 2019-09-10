@@ -7,8 +7,11 @@
   <contextParameter xmi:id="_7cvisc8MEemoJKaXQJ1LMQ" comment="" name="cassandra_host" prompt="cassandra_host?" promptNeeded="false" type="id_String" value="127.0.0.1"/>
   <contextParameter xmi:id="_JubfoM8NEemoJKaXQJ1LMQ" comment="" name="zookeeper_host" prompt="zookeeper_host?" promptNeeded="false" type="id_String" value="127.0.0.1:2181"/>
   <contextParameter xmi:id="_PUrEgM8PEemoJKaXQJ1LMQ" comment="" name="cassandra_port" prompt="cassandra_port?" promptNeeded="false" type="id_String" value="9042"/>
-  <contextParameter xmi:id="_64U_UM8SEemoJKaXQJ1LMQ" comment="" name="cassandra_group" prompt="cassandra_group?" promptNeeded="false" type="id_String" value="cassandra"/>
+  <contextParameter xmi:id="_64U_UM8SEemoJKaXQJ1LMQ" comment="" name="group_cassandra" prompt="group_cassandra?" promptNeeded="false" type="id_String" value="cassandra"/>
   <contextParameter xmi:id="__A46sM8TEemoJKaXQJ1LMQ" comment="" name="column_family" prompt="column_family?" promptNeeded="false" type="id_String" value="grand_debat"/>
   <contextParameter xmi:id="_FoglkM8tEemoJKaXQJ1LMQ" comment="" name="data" prompt="data?" promptNeeded="false" type="id_String" value="/home/form-bd/data/"/>
-  <contextParameter xmi:id="_bIP2oM_HEemxCdbMFoB_cQ" comment="" name="topic" prompt="topic?" promptNeeded="false" type="id_String" value="grand_debat"/>
+  <contextParameter xmi:id="_bIP2oM_HEemxCdbMFoB_cQ" comment="" name="topic_cassandra" prompt="topic_cassandra?" promptNeeded="false" type="id_String" value="grand_debat_cassandra"/>
+  <contextParameter xmi:id="_mvxXcNO5EemPgrM6Y4a4KA" comment="" name="topic_elasticsearch" prompt="topic_elasticsearch?" promptNeeded="false" type="id_String" value="grand_debat_elasticsearch"/>
+  <contextParameter xmi:id="_mvxXcdO5EemPgrM6Y4a4KA" comment="" name="group_elasticsearch" prompt="group_elasticsearch?" promptNeeded="false" type="id_String" value="elasticsearch"/>
+  <contextParameter xmi:id="_mvxXctO5EemPgrM6Y4a4KA" comment="" name="indice" prompt="indice?" promptNeeded="false" type="id_String" value="grand_debat"/>
 </talendfile:ContextType>

@@ -11,14 +11,14 @@
   <groupId>org.example.local_project.job</groupId>
   <artifactId>kafka2cassandra</artifactId>
   <version>1.0.0</version>
-  <name>LOCAL_PROJECT kafka2cassandra-1.0.0 (1.0,Job Designs)</name>
+  <name>DEBAT_NATIONAL kafka2cassandra-1.0.0 (1.0,Job Designs)</name>
   <properties>
     <talend.job.type>Standard</talend.job.type>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <talend.pigudf.groupid>org.example.local_project.pigudf</talend.pigudf.groupid>
     <talend.job.folder></talend.job.folder>
     <talend.job.context>Default</talend.job.context>
-    <talend.job.path>local_project/kafka2cassandra_1_0</talend.job.path>
+    <talend.job.path>debat_national/kafka2cassandra_1_0</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
@@ -28,13 +28,13 @@
     <talend.routine.groupid>org.example.local_project.code</talend.routine.groupid>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <talend.project.name.lowercase>local_project</talend.project.name.lowercase>
+    <talend.project.name.lowercase>debat_national</talend.project.name.lowercase>
     <talend.project.id>0</talend.project.id>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.product.version>7.2.1.20190620_1446</talend.product.version>
-    <talend.project.name>LOCAL_PROJECT</talend.project.name>
+    <talend.project.name>DEBAT_NATIONAL</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
