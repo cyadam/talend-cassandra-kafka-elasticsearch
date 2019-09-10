@@ -169,8 +169,8 @@
     <elementParameter field="TEXT" name="BATCH_MAX_DURATION" value="600000" show="false"/>
     <elementParameter field="CHECK" name="USE_BATCH_MAX_SIZE" value="false"/>
     <elementParameter field="TEXT" name="BATCH_MAX_SIZE" value="5000" show="false"/>
-    <elementParameter field="CHECK" name="USE_BATCH_MESSAGE_TIMEOUT" value="false"/>
-    <elementParameter field="TEXT" name="BATCH_MESSAGE_TIMEOUT" value="10000" show="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MESSAGE_TIMEOUT" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_MESSAGE_TIMEOUT" value="10000"/>
     <elementParameter field="CHECK" name="USE_HTTPS" value="false" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" value="" show="false"/>
     <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
