@@ -99,6 +99,10 @@
     "id" : "_KGFvgM7-EemoJKaXQJ1LMQ - metadata",
     "version" : "Latest",
     "type" : "schema"
+  }, {
+    "id" : "_TL25oNO-EemXBfG5njnAZA - metadata",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
@@ -197,6 +201,10 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
+  }, {
+    "id" : "_TL25oNO-EemXBfG5njnAZA - metadata",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {

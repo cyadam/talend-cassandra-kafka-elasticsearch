@@ -1,0 +1,289 @@
+GET grand_debat/_mapping
+DELETE grand_debat
+PUT grand_debat
+PUT grand_debat/_mapping
+{
+  "properties": {
+    "A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__": {
+      "type": "keyword",
+      "fields": {
+        "standard": {
+          "type": "text",
+          "analyzer": "standard",
+          "fielddata": "true"
+        },
+        "french": {
+          "type": "text",
+          "analyzer": "french",
+          "fielddata": "true"
+        }
+      }
+    },
+    "authorId": {
+      "type": "keyword"
+    },
+    "authorType": {
+      "type": "keyword"
+    },
+    "authorZipCode": {
+      "type": "keyword"
+    },
+    "createdAt": {
+      "type": "date",
+      "format": "yyyy-MM-dd HH:mm:ss"
+    },
+    "id": {
+      "type": "keyword"
+    },
+    "publishedAt": {
+      "type": "date",
+      "format": "yyyy-MM-dd HH:mm:ss"
+    },
+    "reference": {
+      "type": "keyword"
+    },
+    "theme": {
+      "type": "keyword"
+    },
+    "title": {
+      "type": "text",
+      "analyzer": "french",
+      "fielddata": "true"
+    },
+    "trashed": {
+      "type": "boolean"
+    },
+    "trashedStatus": {
+      "type": "keyword"
+    },
+    "updatedAt": {
+      "type": "date",
+      "format": "yyyy-MM-dd HH:mm:ss"
+    }
+  }
+}

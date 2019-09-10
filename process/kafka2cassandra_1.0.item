@@ -471,14 +471,16 @@
     <elementParameter field="CHECK" name="DEFINE_CF_STRUCTS" value="true" show="false"/>
     <elementParameter field="CLOSED_LIST" name="COMPARATOR" value="AsciiType" show="false"/>
     <elementParameter field="CLOSED_LIST" name="ACTION_ON_DATA" value="UPSERT" show="false"/>
-    <elementParameter field="COLUMN_LIST" name="KEY_COLUMN" value="reference" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="KEY_COLUMN" value="theme" show="false"/>
     <elementParameter field="CHECK" name="INC_KEY" value="true" show="false"/>
-    <elementParameter field="COLUMN_LIST" name="SUPER_KEY_COLUMN" value="reference" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="SUPER_KEY_COLUMN" value="theme" show="false"/>
     <elementParameter field="CHECK" name="INC_SUPER_KEY" value="true" show="false"/>
     <elementParameter field="CHECK" name="DELETE_ROW" value="false" show="false"/>
     <elementParameter field="CHECK" name="DELETE_SUPER_COLUMN" value="false" show="false"/>
     <elementParameter field="TABLE" name="DELETE_COLUMNS" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" value="_TL25oNO-EemXBfG5njnAZA - metadata" show="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false" show="false"/>
     <elementParameter field="CHECK" name="USE_UNLOGGED_BATCH" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="1000"/>
@@ -489,9 +491,9 @@
     <elementParameter field="CHECK" name="INSERT_IF_NOT_EXISTS" value="false"/>
     <elementParameter field="CHECK" name="DELETE_IF_EXISTS" value="false" show="false"/>
     <elementParameter field="CHECK" name="USING_TTL" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="TTL" value="reference" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="TTL" value="theme" show="false"/>
     <elementParameter field="CHECK" name="USING_TIMESTAMP" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="TIMESTAMP" value="reference" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="TIMESTAMP" value="theme" show="false"/>
     <elementParameter field="TABLE" name="IF_CONDITION" show="false"/>
     <elementParameter field="TABLE" name="ASSIGNMENT_OPERATION" show="false"/>
     <elementParameter field="TABLE" name="DELETE_COLUMN_BY_POSITION_KEY" show="false"/>
@@ -556,7 +558,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
@@ -577,7 +579,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>

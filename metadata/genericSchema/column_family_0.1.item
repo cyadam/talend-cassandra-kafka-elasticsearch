@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_TL7LENO-EemXBfG5njnAZA" comment="connectionComment" label="connectionLabel" dataPackage="_TL7LEdO-EemXBfG5njnAZA" mappingTypeUsed="true" mappingTypeId="cassandra22_datastax_id"/>
+  <TalendMetadata:GenericPackage xmi:id="_TL7LEdO-EemXBfG5njnAZA" dataManager="_TL7LENO-EemXBfG5njnAZA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_TL7LEtO-EemXBfG5njnAZA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL7LE9O-EemXBfG5njnAZA" name="theme" id="285" label="theme" length="-1" sourceType="varchar" talendType="id_String" key="true" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZMNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZMdO-EemXBfG5njnAZA" name="id" id="286" label="id" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZMtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZM9O-EemXBfG5njnAZA" name="reference" id="287" label="reference" length="-1" sourceType="varchar" talendType="id_String" key="true" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZNNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZNdO-EemXBfG5njnAZA" name="title" id="288" label="title" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZNtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZN9O-EemXBfG5njnAZA" name="createdAt" id="289" label="createdAt" length="-1" sourceType="timestamp" talendType="id_Date" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;">
+        <initialValue xmi:id="_TL8ZONO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZOdO-EemXBfG5njnAZA" name="publishedAt" id="290" label="publishedAt" length="-1" sourceType="timestamp" talendType="id_Date" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;">
+        <initialValue xmi:id="_TL8ZOtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZO9O-EemXBfG5njnAZA" name="updatedAt" id="291" label="updatedAt" length="-1" sourceType="timestamp" talendType="id_Date" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;">
+        <initialValue xmi:id="_TL8ZPNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZPdO-EemXBfG5njnAZA" name="trashed" id="292" label="trashed" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZPtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZP9O-EemXBfG5njnAZA" name="trashedStatus" id="293" label="trashedStatus" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZQNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZQdO-EemXBfG5njnAZA" name="authorId" id="294" label="authorId" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZQtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZQ9O-EemXBfG5njnAZA" name="authorType" id="295" label="authorType" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZRNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZRdO-EemXBfG5njnAZA" name="authorZipCode" id="296" label="authorZipCode" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZRtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZR9O-EemXBfG5njnAZA" name="Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__" id="297" label="Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZSNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZSdO-EemXBfG5njnAZA" name="Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__" id="298" label="Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZStO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZS9O-EemXBfG5njnAZA" name="Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__" id="299" label="Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZTNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZTdO-EemXBfG5njnAZA" name="Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__" id="300" label="Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZTtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZT9O-EemXBfG5njnAZA" name="A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__" id="301" label="A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZUNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZUdO-EemXBfG5njnAZA" name="Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__" id="302" label="Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZUtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZU9O-EemXBfG5njnAZA" name="Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__" id="303" label="Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZVNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZVdO-EemXBfG5njnAZA" name="Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__" id="304" label="Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZVtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZV9O-EemXBfG5njnAZA" name="Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__" id="305" label="Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZWNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZWdO-EemXBfG5njnAZA" name="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__" id="306" label="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZWtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZW9O-EemXBfG5njnAZA" name="Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___" id="307" label="Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZXNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZXdO-EemXBfG5njnAZA" name="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__" id="308" label="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZXtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZX9O-EemXBfG5njnAZA" name="Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__" id="309" label="Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZYNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZYdO-EemXBfG5njnAZA" name="Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__" id="310" label="Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZYtO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZY9O-EemXBfG5njnAZA" name="Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__" id="311" label="Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZZNO-EemXBfG5njnAZA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_TL8ZZdO-EemXBfG5njnAZA" name="Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__" id="312" label="Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__" length="-1" sourceType="varchar" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_TL8ZZtO-EemXBfG5njnAZA"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

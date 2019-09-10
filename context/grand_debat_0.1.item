@@ -14,4 +14,6 @@
   <contextParameter xmi:id="_mvxXcNO5EemPgrM6Y4a4KA" comment="" name="topic_elasticsearch" prompt="topic_elasticsearch?" promptNeeded="false" type="id_String" value="grand_debat_elasticsearch"/>
   <contextParameter xmi:id="_mvxXcdO5EemPgrM6Y4a4KA" comment="" name="group_elasticsearch" prompt="group_elasticsearch?" promptNeeded="false" type="id_String" value="elasticsearch"/>
   <contextParameter xmi:id="_mvxXctO5EemPgrM6Y4a4KA" comment="" name="indice" prompt="indice?" promptNeeded="false" type="id_String" value="grand_debat"/>
+  <contextParameter xmi:id="_9QsNYNO-EemXBfG5njnAZA" comment="" name="elasticsearch_host" prompt="elasticsearch_host?" promptNeeded="false" type="id_String" value="127.0.0.1"/>
+  <contextParameter xmi:id="_EORDgNO_EemXBfG5njnAZA" comment="" name="elasticsearch_port" prompt="elasticsearch_port?" promptNeeded="false" type="id_Integer" value="9200"/>
 </talendfile:ContextType>
