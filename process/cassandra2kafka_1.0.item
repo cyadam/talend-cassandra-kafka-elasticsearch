@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="topic" prompt="topic?" promptNeeded="false" type="id_String" value="la_transition_ecologique_es"/>
+    <contextParameter comment="" name="cassandra_group" prompt="cassandra_group?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="cassandra"/>
+    <contextParameter comment="" name="cassandra_host" prompt="cassandra_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1"/>
+    <contextParameter comment="" name="cassandra_port" prompt="cassandra_port?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="9042"/>
+    <contextParameter comment="" name="column_family" prompt="column_family?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
+    <contextParameter comment="" name="data" prompt="data?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="/home/form-bd/data/"/>
+    <contextParameter comment="" name="kafka_host" prompt="kafka_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1:9092"/>
+    <contextParameter comment="" name="keyspace" prompt="keyspace?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
+    <contextParameter comment="" name="local" prompt="local?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="2019-01-31-LA_TRANSITION_ECOLOGIQUE.csv"/>
+    <contextParameter comment="" name="url" prompt="url?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="http://opendata.auth-6f31f706db6f4a24b55f42a6a79c5086.storage.sbg5.cloud.ovh.net/2019-01-31/LA_TRANSITION_ECOLOGIQUE.csv"/>
+    <contextParameter comment="" name="zookeeper_host" prompt="zookeeper_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1:2181"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;/home/form-bd/Downloads/TOS_BD-20190620_1446-V7.2.1/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_-rFwMMo5Eem57eVXq_rZnw" name="DataOperation"/>
+    <routinesParameter id="_-rCF0Mo5Eem57eVXq_rZnw" name="Mathematical"/>
+    <routinesParameter id="_-rD7AMo5Eem57eVXq_rZnw" name="Numeric"/>
+    <routinesParameter id="_-q_pkMo5Eem57eVXq_rZnw" name="Relational"/>
+    <routinesParameter id="_-po-sMo5Eem57eVXq_rZnw" name="StringHandling"/>
+    <routinesParameter id="_-q90YMo5Eem57eVXq_rZnw" name="TalendDataGenerator"/>
+    <routinesParameter id="_-rPhMMo5Eem57eVXq_rZnw" name="TalendDate"/>
+    <routinesParameter id="_-rHlYMo5Eem57eVXq_rZnw" name="TalendStringUtil"/>
+    <routinesParameter id="_-rNsAMo5Eem57eVXq_rZnw" name="TalendString"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tKafkaConnection" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tKafkaConnection_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_1_1_0"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_CONNECT" value="context.zookeeper_host"/>
+    <elementParameter field="TEXT" name="BROKER_LIST" value="context.kafka_host"/>
+    <elementParameter field="CHECK" name="USE_HTTPS" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false"/>
+    <elementParameter field="FILE" name="JAAS_CONF" value="&quot;/etc/kafka/kafka_client_jaas.conf&quot;" show="false"/>
+    <elementParameter field="TEXT" name="KRB_SERVICE_NAME" value="&quot;kafka&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_KINIT_PATH" value="false" show="false"/>
+    <elementParameter field="FILE" name="KINIT_PATH" value="&quot;/usr/bin/kinit&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_KRB5_CONF" value="false" show="false"/>
+    <elementParameter field="FILE" name="KRB5_CONF" value="&quot;/etc/kafka/krb5.conf&quot;" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tCassandraConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tCassandraConnection_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="CASSANDRA_3_0"/>
+    <elementParameter field="CLOSED_LIST" name="API_TYPE" value="DATASTAX" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.cassandra_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.cassandra_port"/>
+    <elementParameter field="CHECK" name="REQUIRED_AUTHENTICATION" value="false"/>
+    <elementParameter field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="CHECK" name="USE_HTTPS" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" value="" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tCassandraInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tCassandraInput_1" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="cassandra22_datastax_id" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tCassandraConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="CASSANDRA_3_0" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="API_TYPE" value="DATASTAX" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;9042&quot;" show="false"/>
+    <elementParameter field="CHECK" name="REQUIRED_AUTHENTICATION" value="false" show="false"/>
+    <elementParameter field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="CHECK" name="USE_HTTPS" value="false" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" value="" show="false"/>
+    <elementParameter field="TEXT" name="KEY_SPACE" value="context.keyspace"/>
+    <elementParameter field="TEXT" name="COLUMN_FAMILY" value="context.column_family"/>
+    <elementParameter field="CLOSED_LIST" name="COLUMN_FAMILY_TYPE" value="STANDARD" show="false"/>
+    <elementParameter field="CHECK" name="INC_KEY" value="false" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="KEY_COLUMN" value="reference" show="false"/>
+    <elementParameter field="OPENED_LIST" name="ROW_KEY_TYPE" value="String" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="ROW_KEY_C_TYPE" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="INC_SUPER_KEY" value="false" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="SUPER_KEY_COLUMN" value="reference" show="false"/>
+    <elementParameter field="OPENED_LIST" name="SUPER_COLUMN_TYPE" value="String" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SUPER_COLUMN_C_TYPE" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_KEYS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROW_KEYS" value="" show="false"/>
+    <elementParameter field="TEXT" name="KEY_START" value="" show="false"/>
+    <elementParameter field="TEXT" name="KEY_END" value="" show="false"/>
+    <elementParameter field="TEXT" name="KEY_LIMIT" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_COLUMNS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="COLUMNS" value="" show="false"/>
+    <elementParameter field="TEXT" name="COLUMN_START" value="" show="false"/>
+    <elementParameter field="TEXT" name="COLUMN_END" value="" show="false"/>
+    <elementParameter field="TEXT" name="COLUMN_LIMIT" value="1000" show="false"/>
+    <elementParameter field="MEMO" name="QUERY" value="&quot;select * from &quot;+context.keyspace+&quot;.&quot;+context.column_family"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tCassandraInput_1">
+      <column comment="" key="true" length="-1" name="reference" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="title" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="createdAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="publishedAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="updatedAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="trashed" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="trashedStatus" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="authorId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="authorType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="authorZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="varchar" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteJSONField_1" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="JSONFIELD" value="value"/>
+    <elementParameter field="TABLE" name="ROOT" show="false">
+      <elementValue elementRef="PATH" value="/rootTag"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="1"/>
+      <elementValue elementRef="PATH" value="/rootTag/title"/>
+      <elementValue elementRef="COLUMN" value="title"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="3"/>
+      <elementValue elementRef="PATH" value="/rootTag/createdAt"/>
+      <elementValue elementRef="COLUMN" value="createdAt"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="4"/>
+      <elementValue elementRef="PATH" value="/rootTag/publishedAt"/>
+      <elementValue elementRef="COLUMN" value="publishedAt"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="5"/>
+      <elementValue elementRef="PATH" value="/rootTag/updatedAt"/>
+      <elementValue elementRef="COLUMN" value="updatedAt"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="6"/>
+      <elementValue elementRef="PATH" value="/rootTag/trashed"/>
+      <elementValue elementRef="COLUMN" value="trashed"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="7"/>
+      <elementValue elementRef="PATH" value="/rootTag/trashedStatus"/>
+      <elementValue elementRef="COLUMN" value="trashedStatus"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="8"/>
+      <elementValue elementRef="PATH" value="/rootTag/authorId"/>
+      <elementValue elementRef="COLUMN" value="authorId"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="9"/>
+      <elementValue elementRef="PATH" value="/rootTag/authorType"/>
+      <elementValue elementRef="COLUMN" value="authorType"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="10"/>
+      <elementValue elementRef="PATH" value="/rootTag/authorZipCode"/>
+      <elementValue elementRef="COLUMN" value="authorZipCode"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="11"/>
+      <elementValue elementRef="PATH" value="/rootTag/Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__"/>
+      <elementValue elementRef="COLUMN" value="Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="12"/>
+      <elementValue elementRef="PATH" value="/rootTag/Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__"/>
+      <elementValue elementRef="COLUMN" value="Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="13"/>
+      <elementValue elementRef="PATH" value="/rootTag/Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="COLUMN" value="Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="14"/>
+      <elementValue elementRef="PATH" value="/rootTag/Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="COLUMN" value="Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="15"/>
+      <elementValue elementRef="PATH" value="/rootTag/A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__"/>
+      <elementValue elementRef="COLUMN" value="A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="16"/>
+      <elementValue elementRef="PATH" value="/rootTag/Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__"/>
+      <elementValue elementRef="COLUMN" value="Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="17"/>
+      <elementValue elementRef="PATH" value="/rootTag/Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__"/>
+      <elementValue elementRef="COLUMN" value="Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="18"/>
+      <elementValue elementRef="PATH" value="/rootTag/Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__"/>
+      <elementValue elementRef="COLUMN" value="Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="19"/>
+      <elementValue elementRef="PATH" value="/rootTag/Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__"/>
+      <elementValue elementRef="COLUMN" value="Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="20"/>
+      <elementValue elementRef="PATH" value="/rootTag/Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__"/>
+      <elementValue elementRef="COLUMN" value="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="21"/>
+      <elementValue elementRef="PATH" value="/rootTag/Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___"/>
+      <elementValue elementRef="COLUMN" value="Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="22"/>
+      <elementValue elementRef="PATH" value="/rootTag/Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__"/>
+      <elementValue elementRef="COLUMN" value="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="23"/>
+      <elementValue elementRef="PATH" value="/rootTag/Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__"/>
+      <elementValue elementRef="COLUMN" value="Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="24"/>
+      <elementValue elementRef="PATH" value="/rootTag/Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__"/>
+      <elementValue elementRef="COLUMN" value="Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="25"/>
+      <elementValue elementRef="PATH" value="/rootTag/Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__"/>
+      <elementValue elementRef="COLUMN" value="Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="26"/>
+      <elementValue elementRef="PATH" value="/rootTag/Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__"/>
+      <elementValue elementRef="COLUMN" value="Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="27"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="GROUP" show="false"/>
+    <elementParameter field="TABLE" name="LOOP" show="false">
+      <elementValue elementRef="PATH" value="/rootTag/reference"/>
+      <elementValue elementRef="COLUMN" value="reference"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="2"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="TABLE" name="GROUPBYS"/>
+    <elementParameter field="CHECK" name="REMOVE_ROOT" value="true"/>
+    <elementParameter field="CHECK" name="COMPACT_FORMAT" value="true" show="false"/>
+    <elementParameter field="CHECK" name="QUOTE_ALL_VALUES" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWriteJSONField_1">
+      <column comment="" key="false" length="-1" name="value" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#xA;output_row.serializedValue = input_row.value.getBytes();&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column comment="" key="false" length="-1" name="serializedValue" nullable="true" pattern="" precision="-1" sourceType="" type="id_byte[]" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Toto\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tKafkaOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tKafkaOutput_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tKafkaConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_1_1_0" show="false"/>
+    <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;host1:port1,host2:port2,...&quot;" show="false"/>
+    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="context.topic"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="COMPRESSION" value="GZIP" show="false"/>
+    <elementParameter field="CHECK" name="USE_HTTPS" value="false" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
+    <elementParameter field="FILE" name="JAAS_CONF" value="&quot;/etc/kafka/kafka_client_jaas.conf&quot;" show="false"/>
+    <elementParameter field="TEXT" name="KRB_SERVICE_NAME" value="&quot;kafka&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_KINIT_PATH" value="false" show="false"/>
+    <elementParameter field="FILE" name="KINIT_PATH" value="&quot;/usr/bin/kinit&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_KRB5_CONF" value="false" show="false"/>
+    <elementParameter field="FILE" name="KRB5_CONF" value="&quot;/etc/kafka/krb5.conf&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TABLE" name="KAFKA_PRODUCER_PROPERTIES"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tKafkaOutput_1">
+      <column defaultValue="" key="false" length="0" name="serializedValue" nullable="true" precision="0" sourceType="" type="id_byte[]" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tKafkaConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tKafkaConnection_1" offsetLabelX="0" offsetLabelY="0" source="tKafkaConnection_1" target="tCassandraConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tCassandraInput_1" offsetLabelX="0" offsetLabelY="0" source="tCassandraInput_1" target="tWriteJSONField_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tWriteJSONField_1" offsetLabelX="0" offsetLabelY="0" source="tWriteJSONField_1" target="tJavaRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="value"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tKafkaOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tKafkaConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tCassandraConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tCassandraInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

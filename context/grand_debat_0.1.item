@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_GVwJEM8MEemoJKaXQJ1LMQ" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_GVwJEs8MEemoJKaXQJ1LMQ" comment="" name="keyspace" prompt="keyspace?" promptNeeded="false" type="id_String" value="grand_debat"/>
+  <contextParameter xmi:id="_GVwJE88MEemoJKaXQJ1LMQ" comment="" name="url" prompt="url?" promptNeeded="false" type="id_String" value="http://opendata.auth-6f31f706db6f4a24b55f42a6a79c5086.storage.sbg5.cloud.ovh.net/2019-01-31/LA_TRANSITION_ECOLOGIQUE.csv"/>
+  <contextParameter xmi:id="_GVwJFM8MEemoJKaXQJ1LMQ" comment="" name="local" prompt="local?" promptNeeded="false" type="id_String" value="2019-01-31-LA_TRANSITION_ECOLOGIQUE.csv"/>
+  <contextParameter xmi:id="_7cvisM8MEemoJKaXQJ1LMQ" comment="" name="kafka_host" prompt="kafka_host?" promptNeeded="false" type="id_String" value="127.0.0.1:9092"/>
+  <contextParameter xmi:id="_7cvisc8MEemoJKaXQJ1LMQ" comment="" name="cassandra_host" prompt="cassandra_host?" promptNeeded="false" type="id_String" value="127.0.0.1"/>
+  <contextParameter xmi:id="_JubfoM8NEemoJKaXQJ1LMQ" comment="" name="zookeeper_host" prompt="zookeeper_host?" promptNeeded="false" type="id_String" value="127.0.0.1:2181"/>
+  <contextParameter xmi:id="_PUrEgM8PEemoJKaXQJ1LMQ" comment="" name="cassandra_port" prompt="cassandra_port?" promptNeeded="false" type="id_String" value="9042"/>
+  <contextParameter xmi:id="_64U_UM8SEemoJKaXQJ1LMQ" comment="" name="cassandra_group" prompt="cassandra_group?" promptNeeded="false" type="id_String" value="cassandra"/>
+  <contextParameter xmi:id="__A46sM8TEemoJKaXQJ1LMQ" comment="" name="column_family" prompt="column_family?" promptNeeded="false" type="id_String" value="grand_debat"/>
+  <contextParameter xmi:id="_FoglkM8tEemoJKaXQJ1LMQ" comment="" name="data" prompt="data?" promptNeeded="false" type="id_String" value="/home/form-bd/data/"/>
+  <contextParameter xmi:id="_bIP2oM_HEemxCdbMFoB_cQ" comment="" name="topic" prompt="topic?" promptNeeded="false" type="id_String" value="grand_debat"/>
+</talendfile:ContextType>

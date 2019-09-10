@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="cassandra_group" prompt="cassandra_group?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="cassandra"/>
+    <contextParameter comment="" name="cassandra_host" prompt="cassandra_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1"/>
+    <contextParameter comment="" name="cassandra_port" prompt="cassandra_port?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="9042"/>
+    <contextParameter comment="" name="column_family" prompt="column_family?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
+    <contextParameter comment="" name="data" prompt="data?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="/home/form-bd/data/"/>
+    <contextParameter comment="" name="kafka_host" prompt="kafka_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1:9092"/>
+    <contextParameter comment="" name="keyspace" prompt="keyspace?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
+    <contextParameter comment="" name="local" prompt="local?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="2019-01-31-LA_TRANSITION_ECOLOGIQUE.csv"/>
+    <contextParameter comment="" name="topic" prompt="topic?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="grand_debat"/>
+    <contextParameter comment="" name="url" prompt="url?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="http://opendata.auth-6f31f706db6f4a24b55f42a6a79c5086.storage.sbg5.cloud.ovh.net/2019-01-31/LA_TRANSITION_ECOLOGIQUE.csv"/>
+    <contextParameter comment="" name="zookeeper_host" prompt="zookeeper_host?" promptNeeded="false" repositoryContextId="_RsbGYM8MEemoJKaXQJ1LMQ" type="id_String" value="127.0.0.1:2181"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms256M&quot;,&quot;-Xmx4096M&quot;]}" show="false"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;/home/form-bd/Downloads/TOS_BD-20190620_1446-V7.2.1/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_-rFwMMo5Eem57eVXq_rZnw" name="DataOperation"/>
+    <routinesParameter id="_-rCF0Mo5Eem57eVXq_rZnw" name="Mathematical"/>
+    <routinesParameter id="_-rD7AMo5Eem57eVXq_rZnw" name="Numeric"/>
+    <routinesParameter id="_-q_pkMo5Eem57eVXq_rZnw" name="Relational"/>
+    <routinesParameter id="_-po-sMo5Eem57eVXq_rZnw" name="StringHandling"/>
+    <routinesParameter id="_-q90YMo5Eem57eVXq_rZnw" name="TalendDataGenerator"/>
+    <routinesParameter id="_-rPhMMo5Eem57eVXq_rZnw" name="TalendDate"/>
+    <routinesParameter id="_-rHlYMo5Eem57eVXq_rZnw" name="TalendStringUtil"/>
+    <routinesParameter id="_-rNsAMo5Eem57eVXq_rZnw" name="TalendString"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tKafkaConnection" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tKafkaConnection_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_1_1_0"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_CONNECT" value="context.zookeeper_host"/>
+    <elementParameter field="TEXT" name="BROKER_LIST" value="context.kafka_host"/>
+    <elementParameter field="CHECK" name="USE_HTTPS" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false"/>
+    <elementParameter field="FILE" name="JAAS_CONF" value="&quot;/etc/kafka/kafka_client_jaas.conf&quot;" show="false"/>
+    <elementParameter field="TEXT" name="KRB_SERVICE_NAME" value="&quot;kafka&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_KINIT_PATH" value="false" show="false"/>
+    <elementParameter field="FILE" name="KINIT_PATH" value="&quot;/usr/bin/kinit&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_KRB5_CONF" value="false" show="false"/>
+    <elementParameter field="FILE" name="KRB5_CONF" value="&quot;/etc/kafka/krb5.conf&quot;" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tKafkaInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tKafkaInput_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_TYPE" value="STRING"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tKafkaConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_1_1_0" show="false"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_CONNECT" value="&quot;zk1:port1,zk2:port2,...&quot;" show="false"/>
+    <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;host1:port1,host2:port2,...&quot;" show="false"/>
+    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="context.topic"/>
+    <elementParameter field="TEXT" name="GROUP_ID" value="context.cassandra_group"/>
+    <elementParameter field="CHECK" name="RESET_OFFSET" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="AUTO_OFFSET_RESET" value="LARGEST" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTO_OFFSET_RESET_NEW" value="EARLIEST"/>
+    <elementParameter field="CLOSED_LIST" name="KAFKA_OFFSET_STORAGE" value="ZOOKEEPER" show="false"/>
+    <elementParameter field="CHECK" name="KAFKA_DUAL_COMMIT_CHECK" value="true" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT_OFFSET" value="true"/>
+    <elementParameter field="TEXT" name="KAFKA_COMMIT_INTERVAL" value="5000"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MAX_DURATION" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_MAX_DURATION" value="600000" show="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MAX_SIZE" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_MAX_SIZE" value="5000" show="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MESSAGE_TIMEOUT" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_MESSAGE_TIMEOUT" value="10000"/>
+    <elementParameter field="CHECK" name="USE_HTTPS" value="false" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false" show="false"/>
+    <elementParameter field="FILE" name="JAAS_CONF" value="&quot;/etc/kafka/kafka_client_jaas.conf&quot;" show="false"/>
+    <elementParameter field="TEXT" name="KRB_SERVICE_NAME" value="&quot;kafka&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_KINIT_PATH" value="false" show="false"/>
+    <elementParameter field="FILE" name="KINIT_PATH" value="&quot;/usr/bin/kinit&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SET_KRB5_CONF" value="false" show="false"/>
+    <elementParameter field="FILE" name="KRB5_CONF" value="&quot;/etc/kafka/krb5.conf&quot;" show="false"/>
+    <elementParameter field="TABLE" name="KAFKA_CONSUMER_PROPERTIES"/>
+    <elementParameter field="TEXT" name="KAFKA_CONSUMER_TIMEOUT" value="-1"/>
+    <elementParameter field="CHECK" name="SAVE_OFFSET" value="false"/>
+    <elementParameter field="CHECK" name="CUSTOM_ENCODING" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tKafkaInput_1">
+      <column defaultValue="" key="false" length="0" name="payload" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_KGFvgM7-EemoJKaXQJ1LMQ" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
+    <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="payload"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;$&quot;" show="false"/>
+    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="theme"/>
+      <elementValue elementRef="QUERY" value="&quot;theme&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="QUERY" value="&quot;id&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="reference"/>
+      <elementValue elementRef="QUERY" value="&quot;reference&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="title"/>
+      <elementValue elementRef="QUERY" value="&quot;title&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="createdAt"/>
+      <elementValue elementRef="QUERY" value="&quot;createdAt&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="publishedAt"/>
+      <elementValue elementRef="QUERY" value="&quot;publishedAt&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="updatedAt"/>
+      <elementValue elementRef="QUERY" value="&quot;updatedAt&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="trashed"/>
+      <elementValue elementRef="QUERY" value="&quot;trashed&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="trashedStatus"/>
+      <elementValue elementRef="QUERY" value="&quot;trashedStatus&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="authorId"/>
+      <elementValue elementRef="QUERY" value="&quot;authorId&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="authorType"/>
+      <elementValue elementRef="QUERY" value="&quot;authorType&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="authorZipCode"/>
+      <elementValue elementRef="QUERY" value="&quot;authorZipCode&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__"/>
+      <elementValue elementRef="QUERY" value="&quot;Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__"/>
+      <elementValue elementRef="QUERY" value="&quot;Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="QUERY" value="&quot;Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="QUERY" value="&quot;Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__"/>
+      <elementValue elementRef="QUERY" value="&quot;A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__"/>
+      <elementValue elementRef="QUERY" value="&quot;Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__"/>
+      <elementValue elementRef="QUERY" value="&quot;Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__"/>
+      <elementValue elementRef="QUERY" value="&quot;Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__"/>
+      <elementValue elementRef="QUERY" value="&quot;Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__"/>
+      <elementValue elementRef="QUERY" value="&quot;Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___"/>
+      <elementValue elementRef="QUERY" value="&quot;Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__"/>
+      <elementValue elementRef="QUERY" value="&quot;Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__"/>
+      <elementValue elementRef="QUERY" value="&quot;Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__"/>
+      <elementValue elementRef="QUERY" value="&quot;Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__"/>
+      <elementValue elementRef="QUERY" value="&quot;Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__"/>
+      <elementValue elementRef="QUERY" value="&quot;Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__&quot;"/>
+      <elementValue elementRef="NODECHECK" value=""/>
+      <elementValue elementRef="ISARRAY" value=""/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
+      <elementValue elementRef="SCHEMA_COLUMN" value="theme"/>
+      <elementValue elementRef="QUERY" value="&quot;theme&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="QUERY" value="&quot;id&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="reference"/>
+      <elementValue elementRef="QUERY" value="&quot;reference&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="title"/>
+      <elementValue elementRef="QUERY" value="&quot;title&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="createdAt"/>
+      <elementValue elementRef="QUERY" value="&quot;createdAt&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="publishedAt"/>
+      <elementValue elementRef="QUERY" value="&quot;publishedAt&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="updatedAt"/>
+      <elementValue elementRef="QUERY" value="&quot;updatedAt&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="trashed"/>
+      <elementValue elementRef="QUERY" value="&quot;trashed&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="trashedStatus"/>
+      <elementValue elementRef="QUERY" value="&quot;trashedStatus&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="authorId"/>
+      <elementValue elementRef="QUERY" value="&quot;authorId&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="authorType"/>
+      <elementValue elementRef="QUERY" value="&quot;authorType&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="authorZipCode"/>
+      <elementValue elementRef="QUERY" value="&quot;authorZipCode&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__"/>
+      <elementValue elementRef="QUERY" value="&quot;Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__"/>
+      <elementValue elementRef="QUERY" value="&quot;Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="QUERY" value="&quot;Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="QUERY" value="&quot;Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__"/>
+      <elementValue elementRef="QUERY" value="&quot;A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__"/>
+      <elementValue elementRef="QUERY" value="&quot;Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__"/>
+      <elementValue elementRef="QUERY" value="&quot;Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__"/>
+      <elementValue elementRef="QUERY" value="&quot;Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__"/>
+      <elementValue elementRef="QUERY" value="&quot;Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__"/>
+      <elementValue elementRef="QUERY" value="&quot;Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___"/>
+      <elementValue elementRef="QUERY" value="&quot;Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__"/>
+      <elementValue elementRef="QUERY" value="&quot;Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__"/>
+      <elementValue elementRef="QUERY" value="&quot;Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__"/>
+      <elementValue elementRef="QUERY" value="&quot;Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__"/>
+      <elementValue elementRef="QUERY" value="&quot;Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__"/>
+      <elementValue elementRef="QUERY" value="&quot;Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="DESTINATION" value="tExtractJSONFields_1" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8" show="false"/>
+    <elementParameter field="CHECK" name="USE_LOOP_AS_ROOT" value="false"/>
+    <elementParameter field="CHECK" name="SPLIT_LIST" value="true" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tExtractJSONFields_1">
+      <column comment="" key="true" length="-1" name="theme" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="reference" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="title" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="createdAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="publishedAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="updatedAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="trashed" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="trashedStatus" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="authorId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="authorType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="authorZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="true" length="-1" name="theme" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="reference" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="title" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="createdAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="publishedAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="updatedAt" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="trashed" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="trashedStatus" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="authorId" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="authorType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="authorZipCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteJSONField_1" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="JSONFIELD" value="json"/>
+    <elementParameter field="TABLE" name="ROOT" show="false">
+      <elementValue elementRef="PATH" value="/rootTag"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="1"/>
+      <elementValue elementRef="PATH" value="/rootTag/theme"/>
+      <elementValue elementRef="COLUMN" value="theme"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="2"/>
+      <elementValue elementRef="PATH" value="/rootTag/id"/>
+      <elementValue elementRef="COLUMN" value="id"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="3"/>
+      <elementValue elementRef="PATH" value="/rootTag/title"/>
+      <elementValue elementRef="COLUMN" value="title"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="5"/>
+      <elementValue elementRef="PATH" value="/rootTag/createdAt"/>
+      <elementValue elementRef="COLUMN" value="createdAt"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="6"/>
+      <elementValue elementRef="PATH" value="/rootTag/publishedAt"/>
+      <elementValue elementRef="COLUMN" value="publishedAt"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="7"/>
+      <elementValue elementRef="PATH" value="/rootTag/updatedAt"/>
+      <elementValue elementRef="COLUMN" value="updatedAt"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="8"/>
+      <elementValue elementRef="PATH" value="/rootTag/trashed"/>
+      <elementValue elementRef="COLUMN" value="trashed"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="9"/>
+      <elementValue elementRef="PATH" value="/rootTag/trashedStatus"/>
+      <elementValue elementRef="COLUMN" value="trashedStatus"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="10"/>
+      <elementValue elementRef="PATH" value="/rootTag/authorId"/>
+      <elementValue elementRef="COLUMN" value="authorId"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="11"/>
+      <elementValue elementRef="PATH" value="/rootTag/authorType"/>
+      <elementValue elementRef="COLUMN" value="authorType"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="12"/>
+      <elementValue elementRef="PATH" value="/rootTag/authorZipCode"/>
+      <elementValue elementRef="COLUMN" value="authorZipCode"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="13"/>
+      <elementValue elementRef="PATH" value="/rootTag/Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__"/>
+      <elementValue elementRef="COLUMN" value="Quel_est_aujourd_hui_pour_vous_le_probleme_concret_le_plus_important_dans_le_domaine_de_l_environnement__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="14"/>
+      <elementValue elementRef="PATH" value="/rootTag/Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__"/>
+      <elementValue elementRef="COLUMN" value="Que_faudrait_il_faire_selon_vous_pour_apporter_des_reponses_a_ce_probleme__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="15"/>
+      <elementValue elementRef="PATH" value="/rootTag/Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="COLUMN" value="Diriez_vous_que_votre_vie_quotidienne_est_aujourd_hui_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="16"/>
+      <elementValue elementRef="PATH" value="/rootTag/Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="COLUMN" value="Si_oui__de_quelle_maniere_votre_vie_quotidienne_est_elle_touchee_par_le_changement_climatique__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="17"/>
+      <elementValue elementRef="PATH" value="/rootTag/A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__"/>
+      <elementValue elementRef="COLUMN" value="A_titre_personnel__pensez_vous_pouvoir_contribuer_a_proteger_l_environnement__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="18"/>
+      <elementValue elementRef="PATH" value="/rootTag/Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__"/>
+      <elementValue elementRef="COLUMN" value="Si_oui__que_faites_vous_aujourd_hui_pour_proteger_l_environnement_et_ou_que_pourriez_vous_faire__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="19"/>
+      <elementValue elementRef="PATH" value="/rootTag/Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__"/>
+      <elementValue elementRef="COLUMN" value="Qu_est_ce_qui_pourrait_vous_inciter_a_changer_vos_comportements_comme_par_exemple_mieux_entretenir_et_regler_votre_chauffage__modifier_votre_maniere_de_conduire_ou_renoncer_a_prendre_votre_vehicule_pour_de_tres_petites_distances__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="20"/>
+      <elementValue elementRef="PATH" value="/rootTag/Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__"/>
+      <elementValue elementRef="COLUMN" value="Quelles_seraient_pour_vous_les_solutions_les_plus_simples_et_les_plus_supportables_sur_un_plan_financier_pour_vous_inciter_a_changer_vos_comportements__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="21"/>
+      <elementValue elementRef="PATH" value="/rootTag/Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__"/>
+      <elementValue elementRef="COLUMN" value="Par_rapport_a_votre_mode_de_chauffage_actuel__pensez_vous_qu_il_existe_des_solutions_alternatives_plus_ecologiques__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="22"/>
+      <elementValue elementRef="PATH" value="/rootTag/Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__"/>
+      <elementValue elementRef="COLUMN" value="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_changer_de_mode_de_chauffage__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="23"/>
+      <elementValue elementRef="PATH" value="/rootTag/Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___"/>
+      <elementValue elementRef="COLUMN" value="Avez_vous_pour_vos_deplacements_quotidiens_la_possibilite_de_recourir_a_des_solutions_de_mobilite_alternatives_a_la_voiture_individuelle_comme_les_transports_en_commun__le_covoiturage__l_auto_partage__le_transport_a_la_demande__le_velo__etc___"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="24"/>
+      <elementValue elementRef="PATH" value="/rootTag/Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__"/>
+      <elementValue elementRef="COLUMN" value="Si_oui__que_faudrait_il_faire_pour_vous_convaincre_ou_vous_aider_a_utiliser_ces_solutions_alternatives__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="25"/>
+      <elementValue elementRef="PATH" value="/rootTag/Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__"/>
+      <elementValue elementRef="COLUMN" value="Si_non__quelles_sont_les_solutions_de_mobilite_alternatives_que_vous_souhaiteriez_pouvoir_utiliser__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="26"/>
+      <elementValue elementRef="PATH" value="/rootTag/Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__"/>
+      <elementValue elementRef="COLUMN" value="Et_qui_doit_selon_vous_se_charger_de_vous_proposer_ce_type_de_solutions_alternatives__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="27"/>
+      <elementValue elementRef="PATH" value="/rootTag/Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__"/>
+      <elementValue elementRef="COLUMN" value="Que_pourrait_faire_la_France_pour_faire_partager_ses_choix_en_matiere_d_environnement_au_niveau_europeen_et_international__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="28"/>
+      <elementValue elementRef="PATH" value="/rootTag/Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__"/>
+      <elementValue elementRef="COLUMN" value="Y_a_t_il_d_autres_points_sur_la_transition_ecologique_sur_lesquels_vous_souhaiteriez_vous_exprimer__"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="29"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="GROUP" show="false"/>
+    <elementParameter field="TABLE" name="LOOP" show="false">
+      <elementValue elementRef="PATH" value="/rootTag/reference"/>
+      <elementValue elementRef="COLUMN" value="reference"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="4"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="indice"/>
+      <elementValue elementRef="INPUT_COLUMN" value="theme"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="id"/>
+      <elementValue elementRef="INPUT_COLUMN" value="reference"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="REMOVE_ROOT" value="true"/>
+    <elementParameter field="CHECK" name="COMPACT_FORMAT" value="true" show="false"/>
+    <elementParameter field="CHECK" name="QUOTE_ALL_VALUES" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tWriteJSONField_1">
+      <column comment="" key="false" length="-1" name="json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="indice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_1" show="false"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="&#x9;&#x9;RestHighLevelClient client = new RestHighLevelClient(&#xA;&#x9;&#x9;&#x9;&#x9;RestClient.builder(new HttpHost(&quot;localhost&quot;, 9200, &quot;http&quot;), new HttpHost(&quot;localhost&quot;, 9201, &quot;http&quot;)));&#xA;&#x9;&#x9;Logger logger = LogManager.getLogger(&quot;Loader&quot;);&#xA;&#x9;&#x9;BulkProcessor.Listener listener = new BulkProcessor.Listener() {&#xA;&#x9;&#x9;&#x9;@Override&#xA;&#x9;&#x9;&#x9;public void beforeBulk(long executionId, BulkRequest request) {&#xA;&#x9;&#x9;&#x9;&#x9;int numberOfActions = request.numberOfActions();&#xA;&#x9;&#x9;&#x9;&#x9;logger.info(&quot;Executing bulk [{}] with {} requests&quot;, executionId, numberOfActions);&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;@Override&#xA;&#x9;&#x9;&#x9;public void afterBulk(long executionId, BulkRequest request, BulkResponse response) {&#xA;&#x9;&#x9;&#x9;&#x9;if (response.hasFailures()) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;logger.warn(&quot;Bulk [{}] executed with failures&quot;, executionId);&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;logger.info(&quot;Bulk [{}] completed in {} milliseconds&quot;, executionId, response.getTook().getMillis());&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;@Override&#xA;&#x9;&#x9;&#x9;public void afterBulk(long executionId, BulkRequest request, Throwable failure) {&#xA;&#x9;&#x9;&#x9;&#x9;logger.error(&quot;Failed to execute bulk&quot;, failure);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;};&#xA;&#x9;&#x9;BulkProcessor.Builder builder = BulkProcessor.builder(&#xA;&#x9;&#x9;&#x9;&#x9;(request, bulkListener) -> client.bulkAsync(request, RequestOptions.DEFAULT, bulkListener), listener);&#xA;&#x9;&#x9;builder.setBulkActions(5000);&#xA;&#x9;&#x9;builder.setBulkSize(new ByteSizeValue(100L, ByteSizeUnit.MB));&#xA;&#x9;&#x9;builder.setConcurrentRequests(0);&#xA;&#x9;&#x9;builder.setFlushInterval(TimeValue.timeValueSeconds(10L));&#xA;&#x9;&#x9;builder.setBackoffPolicy(BackoffPolicy.constantBackoff(TimeValue.timeValueSeconds(1L), 3));&#xA;&#x9;&#x9;BulkProcessor bulkProcessor = builder.build();"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#x9;&#x9;IndexRequest one = new IndexRequest(row3.indice).id(row3.id).source(row3.json.replace(&quot;[]&quot;,&quot;\&quot;\&quot;&quot;),XContentType.JSON);&#xA;&#x9;&#x9;bulkProcessor.add(one);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="&#x9;&#x9;bulkProcessor.awaitClose(30L, TimeUnit.SECONDS);&#xA;&#x9;&#x9;bulkProcessor.close();&#xA;&#x9;&#x9;client.close();"/>
+    <elementParameter field="CHECK" name="Version_V2_0" value="false" show="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" value="false" show="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" value="true" show="false"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import java.io.IOException;&#xA;import java.util.concurrent.TimeUnit;&#xA;&#xA;import org.apache.http.HttpHost;&#xA;import org.apache.logging.log4j.LogManager;&#xA;import org.apache.logging.log4j.Logger;&#xA;import org.elasticsearch.action.bulk.BackoffPolicy;&#xA;import org.elasticsearch.action.bulk.BulkProcessor;&#xA;import org.elasticsearch.action.bulk.BulkRequest;&#xA;import org.elasticsearch.action.bulk.BulkResponse;&#xA;import org.elasticsearch.action.index.IndexRequest;&#xA;import org.elasticsearch.client.RequestOptions;&#xA;import org.elasticsearch.client.RestClient;&#xA;import org.elasticsearch.client.RestHighLevelClient;&#xA;import org.elasticsearch.common.unit.ByteSizeUnit;&#xA;import org.elasticsearch.common.unit.ByteSizeValue;&#xA;import org.elasticsearch.common.unit.TimeValue;&#xA;import org.elasticsearch.common.xcontent.XContentType;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaFlex_1"/>
+  </node>
+  <node componentName="tLibraryLoad" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLibraryLoad_1" show="false"/>
+    <elementParameter field="MODULE_LIST" name="LIBRARY" value="&quot;elasticsearch-client-7.3.1-jar-with-dependencies.jar&quot;"/>
+    <elementParameter field="TABLE" name="HOTLIBS"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tKafkaConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tKafkaConnection_1" offsetLabelX="0" offsetLabelY="0" source="tKafkaConnection_1" target="tLibraryLoad_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tKafkaInput_1" offsetLabelX="0" offsetLabelY="0" source="tKafkaInput_1" target="tExtractJSONFields_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tWriteJSONField_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tWriteJSONField_1" offsetLabelX="0" offsetLabelY="0" source="tWriteJSONField_1" target="tJavaFlex_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="indice"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="json"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tKafkaConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tKafkaInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLibraryLoad_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

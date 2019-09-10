@@ -1,0 +1,738 @@
+[ {
+  "id" : "Y291Y2hiYXNlI0NvdWNoYmFzZQ",
+  "version" : "0",
+  "parentId" : null,
+  "configurationType" : null,
+  "name" : "Couchbase",
+  "displayName" : "Couchbase",
+  "edges" : [ "Y291Y2hiYXNlI0NvdWNoYmFzZSNkYXRhc3RvcmUjQ291Y2hiYXNlRGF0YVN0b3Jl" ],
+  "properties" : [ ],
+  "actions" : null
+}, {
+  "id" : "Y291Y2hiYXNlI0NvdWNoYmFzZSNkYXRhc2V0I0NvdWNoYmFzZURhdGFTZXQ",
+  "version" : "1",
+  "parentId" : "Y291Y2hiYXNlI0NvdWNoYmFzZSNkYXRhc3RvcmUjQ291Y2hiYXNlRGF0YVN0b3Jl",
+  "configurationType" : "dataset",
+  "name" : "CouchbaseDataSet",
+  "displayName" : "Couchbase Dataset",
+  "edges" : [ ],
+  "properties" : [ {
+    "path" : "configuration",
+    "name" : "configuration",
+    "displayName" : "Dataset",
+    "type" : "OBJECT",
+    "defaultValue" : null,
+    "validation" : null,
+    "metadata" : {
+      "ui::gridlayout::Advanced::value" : "datastore",
+      "ui::gridlayout::Main::value" : "datastore|schema|bucket",
+      "configurationtype::type" : "dataset",
+      "documentation::value" : "dataset",
+      "configurationtype::name" : "CouchbaseDataSet",
+      "definition::parameter::index" : "0"
+    },
+    "placeholder" : "configuration",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.bucket",
+    "name" : "bucket",
+    "displayName" : "Bucket",
+    "type" : "STRING",
+    "defaultValue" : null,
+    "validation" : {
+      "required" : true,
+      "min" : null,
+      "max" : null,
+      "minLength" : null,
+      "maxLength" : null,
+      "minItems" : null,
+      "maxItems" : null,
+      "uniqueItems" : null,
+      "pattern" : null,
+      "enumValues" : null
+    },
+    "metadata" : {
+      "documentation::value" : "Bucket name"
+    },
+    "placeholder" : "bucket",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.datastore",
+    "name" : "datastore",
+    "displayName" : "Datastore",
+    "type" : "OBJECT",
+    "defaultValue" : null,
+    "validation" : null,
+    "metadata" : {
+      "ui::gridlayout::Advanced::value" : "connectTimeout",
+      "ui::gridlayout::Main::value" : "bootstrapNodes|username|password",
+      "action::healthcheck" : "healthCheck",
+      "configurationtype::type" : "datastore",
+      "documentation::value" : "Connection",
+      "configurationtype::name" : "CouchbaseDataStore"
+    },
+    "placeholder" : "datastore",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.datastore.bootstrapNodes",
+    "name" : "bootstrapNodes",
+    "displayName" : "Bootstrap Nodes",
+    "type" : "STRING",
+    "defaultValue" : null,
+    "validation" : {
+      "required" : true,
+      "min" : null,
+      "max" : null,
+      "minLength" : null,
+      "maxLength" : null,
+      "minItems" : null,
+      "maxItems" : null,
+      "uniqueItems" : null,
+      "pattern" : null,
+      "enumValues" : null
+    },
+    "metadata" : {
+      "documentation::value" : "Bootstrap nodes"
+    },
+    "placeholder" : "bootstrapNodes",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.datastore.connectTimeout",
+    "name" : "connectTimeout",
+    "displayName" : "Connect Timeout",
+    "type" : "NUMBER",
+    "defaultValue" : "20",
+    "validation" : {
+      "required" : null,
+      "min" : 5,
+      "max" : null,
+      "minLength" : null,
+      "maxLength" : null,
+      "minItems" : null,
+      "maxItems" : null,
+      "uniqueItems" : null,
+      "pattern" : null,
+      "enumValues" : null
+    },
+    "metadata" : {
+      "documentation::value" : "Set the maximum number of seconds that a client will wait for opened a Bucket. Min value is 5 seconds."
+    },
+    "placeholder" : "connectTimeout",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.datastore.password",
+    "name" : "password",
+    "displayName" : "Password",
+    "type" : "STRING",
+    "defaultValue" : null,
+    "validation" : {
+      "required" : true,
+      "min" : null,
+      "max" : null,
+      "minLength" : null,
+      "maxLength" : null,
+      "minItems" : null,
+      "maxItems" : null,
+      "uniqueItems" : null,
+      "pattern" : null,
+      "enumValues" : null
+    },
+    "metadata" : {
+      "ui::credential" : "true",
+      "documentation::value" : "Password"
+    },
+    "placeholder" : "password",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.datastore.username",
+    "name" : "username",
+    "displayName" : "Username",
+    "type" : "STRING",
+    "defaultValue" : null,
+    "validation" : {
+      "required" : true,
+      "min" : null,
+      "max" : null,
+      "minLength" : null,
+      "maxLength" : null,
+      "minItems" : null,
+      "maxItems" : null,
+      "uniqueItems" : null,
+      "pattern" : null,
+      "enumValues" : null
+    },
+    "metadata" : {
+      "documentation::value" : "Username"
+    },
+    "placeholder" : "username",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.schema",
+    "name" : "schema",
+    "displayName" : "Schema",
+    "type" : "ARRAY",
+    "defaultValue" : null,
+    "validation" : null,
+    "metadata" : {
+      "action::schema::discoverSchema" : "discover",
+      "action::schema::type" : "OUT",
+      "ui::structure::type" : "OUT",
+      "action::schema" : "discover",
+      "ui::structure::discoverSchema" : "discover",
+      "ui::structure::value" : "__default__",
+      "documentation::value" : "Schema"
+    },
+    "placeholder" : "schema",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.schema[]",
+    "name" : "schema[]",
+    "displayName" : "schema[${index}]",
+    "type" : "STRING",
+    "defaultValue" : null,
+    "validation" : null,
+    "metadata" : { },
+    "placeholder" : "schema[${index}]",
+    "proposalDisplayNames" : null
+  } ],
+  "actions" : [ {
+    "family" : "Couchbase",
+    "name" : "discover",
+    "type" : "schema",
+    "displayName" : "Discover schema",
+    "properties" : [ {
+      "path" : "dataSet",
+      "name" : "dataSet",
+      "displayName" : "dataSet",
+      "type" : "OBJECT",
+      "defaultValue" : null,
+      "validation" : null,
+      "metadata" : {
+        "ui::gridlayout::Advanced::value" : "datastore",
+        "ui::gridlayout::Main::value" : "datastore|schema|bucket",
+        "configurationtype::type" : "dataset",
+        "documentation::value" : "Couchbase DataSet",
+        "configurationtype::name" : "CouchbaseDataSet",
+        "definition::parameter::index" : "0"
+      },
+      "placeholder" : "dataSet",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "dataSet.bucket",
+      "name" : "bucket",
+      "displayName" : "Bucket",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : {
+        "required" : true,
+        "min" : null,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "documentation::value" : "Bucket name"
+      },
+      "placeholder" : "bucket",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "dataSet.datastore",
+      "name" : "datastore",
+      "displayName" : "Datastore",
+      "type" : "OBJECT",
+      "defaultValue" : null,
+      "validation" : null,
+      "metadata" : {
+        "ui::gridlayout::Advanced::value" : "connectTimeout",
+        "ui::gridlayout::Main::value" : "bootstrapNodes|username|password",
+        "action::healthcheck" : "healthCheck",
+        "configurationtype::type" : "datastore",
+        "documentation::value" : "Connection",
+        "configurationtype::name" : "CouchbaseDataStore"
+      },
+      "placeholder" : "datastore",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "dataSet.datastore.bootstrapNodes",
+      "name" : "bootstrapNodes",
+      "displayName" : "Bootstrap Nodes",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : {
+        "required" : true,
+        "min" : null,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "documentation::value" : "Bootstrap nodes"
+      },
+      "placeholder" : "bootstrapNodes",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "dataSet.datastore.connectTimeout",
+      "name" : "connectTimeout",
+      "displayName" : "Connect Timeout",
+      "type" : "NUMBER",
+      "defaultValue" : "20",
+      "validation" : {
+        "required" : null,
+        "min" : 5,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "documentation::value" : "Set the maximum number of seconds that a client will wait for opened a Bucket. Min value is 5 seconds."
+      },
+      "placeholder" : "connectTimeout",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "dataSet.datastore.password",
+      "name" : "password",
+      "displayName" : "Password",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : {
+        "required" : true,
+        "min" : null,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "ui::credential" : "true",
+        "documentation::value" : "Password"
+      },
+      "placeholder" : "password",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "dataSet.datastore.username",
+      "name" : "username",
+      "displayName" : "Username",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : {
+        "required" : true,
+        "min" : null,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "documentation::value" : "Username"
+      },
+      "placeholder" : "username",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "dataSet.schema",
+      "name" : "schema",
+      "displayName" : "Schema",
+      "type" : "ARRAY",
+      "defaultValue" : null,
+      "validation" : null,
+      "metadata" : {
+        "action::schema::discoverSchema" : "discover",
+        "action::schema::type" : "OUT",
+        "ui::structure::type" : "OUT",
+        "action::schema" : "discover",
+        "ui::structure::discoverSchema" : "discover",
+        "ui::structure::value" : "__default__",
+        "documentation::value" : "Schema"
+      },
+      "placeholder" : "schema",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "dataSet.schema[]",
+      "name" : "schema[]",
+      "displayName" : "schema[${index}]",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : null,
+      "metadata" : { },
+      "placeholder" : "schema[${index}]",
+      "proposalDisplayNames" : null
+    } ]
+  }, {
+    "family" : "Couchbase",
+    "name" : "healthCheck",
+    "type" : "healthcheck",
+    "displayName" : "Check connection",
+    "properties" : [ {
+      "path" : "configuration.dataset.connection",
+      "name" : "configuration.dataset.connection",
+      "displayName" : "configuration.dataset.connection",
+      "type" : "OBJECT",
+      "defaultValue" : null,
+      "validation" : null,
+      "metadata" : {
+        "ui::gridlayout::Advanced::value" : "connectTimeout",
+        "action::healthcheck" : "healthCheck",
+        "configurationtype::type" : "datastore",
+        "configurationtype::name" : "CouchbaseDataStore",
+        "ui::gridlayout::Main::value" : "bootstrapNodes|username|password",
+        "documentation::value" : "Couchbase connection",
+        "definition::parameter::index" : "0"
+      },
+      "placeholder" : "configuration.dataset.connection",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "configuration.dataset.connection.bootstrapNodes",
+      "name" : "bootstrapNodes",
+      "displayName" : "Bootstrap Nodes",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : {
+        "required" : true,
+        "min" : null,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "documentation::value" : "Bootstrap nodes"
+      },
+      "placeholder" : "bootstrapNodes",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "configuration.dataset.connection.connectTimeout",
+      "name" : "connectTimeout",
+      "displayName" : "Connect Timeout",
+      "type" : "NUMBER",
+      "defaultValue" : "20",
+      "validation" : {
+        "required" : null,
+        "min" : 5,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "documentation::value" : "Set the maximum number of seconds that a client will wait for opened a Bucket. Min value is 5 seconds."
+      },
+      "placeholder" : "connectTimeout",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "configuration.dataset.connection.password",
+      "name" : "password",
+      "displayName" : "Password",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : {
+        "required" : true,
+        "min" : null,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "ui::credential" : "true",
+        "documentation::value" : "Password"
+      },
+      "placeholder" : "password",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "configuration.dataset.connection.username",
+      "name" : "username",
+      "displayName" : "Username",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : {
+        "required" : true,
+        "min" : null,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "documentation::value" : "Username"
+      },
+      "placeholder" : "username",
+      "proposalDisplayNames" : null
+    } ]
+  } ]
+}, {
+  "id" : "Y291Y2hiYXNlI0NvdWNoYmFzZSNkYXRhc3RvcmUjQ291Y2hiYXNlRGF0YVN0b3Jl",
+  "version" : "1",
+  "parentId" : "Y291Y2hiYXNlI0NvdWNoYmFzZQ",
+  "configurationType" : "datastore",
+  "name" : "CouchbaseDataStore",
+  "displayName" : "Couchbase Connection",
+  "edges" : [ "Y291Y2hiYXNlI0NvdWNoYmFzZSNkYXRhc2V0I0NvdWNoYmFzZURhdGFTZXQ" ],
+  "properties" : [ {
+    "path" : "configuration",
+    "name" : "configuration",
+    "displayName" : "Datastore",
+    "type" : "OBJECT",
+    "defaultValue" : null,
+    "validation" : null,
+    "metadata" : {
+      "ui::gridlayout::Advanced::value" : "connectTimeout",
+      "action::healthcheck" : "healthCheck",
+      "configurationtype::type" : "datastore",
+      "configurationtype::name" : "CouchbaseDataStore",
+      "ui::gridlayout::Main::value" : "bootstrapNodes|username|password",
+      "documentation::value" : "Connection",
+      "definition::parameter::index" : "0"
+    },
+    "placeholder" : "configuration",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.bootstrapNodes",
+    "name" : "bootstrapNodes",
+    "displayName" : "Bootstrap Nodes",
+    "type" : "STRING",
+    "defaultValue" : null,
+    "validation" : {
+      "required" : true,
+      "min" : null,
+      "max" : null,
+      "minLength" : null,
+      "maxLength" : null,
+      "minItems" : null,
+      "maxItems" : null,
+      "uniqueItems" : null,
+      "pattern" : null,
+      "enumValues" : null
+    },
+    "metadata" : {
+      "documentation::value" : "Bootstrap nodes"
+    },
+    "placeholder" : "bootstrapNodes",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.connectTimeout",
+    "name" : "connectTimeout",
+    "displayName" : "Connect Timeout",
+    "type" : "NUMBER",
+    "defaultValue" : "20",
+    "validation" : {
+      "required" : null,
+      "min" : 5,
+      "max" : null,
+      "minLength" : null,
+      "maxLength" : null,
+      "minItems" : null,
+      "maxItems" : null,
+      "uniqueItems" : null,
+      "pattern" : null,
+      "enumValues" : null
+    },
+    "metadata" : {
+      "documentation::value" : "Set the maximum number of seconds that a client will wait for opened a Bucket. Min value is 5 seconds."
+    },
+    "placeholder" : "connectTimeout",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.password",
+    "name" : "password",
+    "displayName" : "Password",
+    "type" : "STRING",
+    "defaultValue" : null,
+    "validation" : {
+      "required" : true,
+      "min" : null,
+      "max" : null,
+      "minLength" : null,
+      "maxLength" : null,
+      "minItems" : null,
+      "maxItems" : null,
+      "uniqueItems" : null,
+      "pattern" : null,
+      "enumValues" : null
+    },
+    "metadata" : {
+      "ui::credential" : "true",
+      "documentation::value" : "Password"
+    },
+    "placeholder" : "password",
+    "proposalDisplayNames" : null
+  }, {
+    "path" : "configuration.username",
+    "name" : "username",
+    "displayName" : "Username",
+    "type" : "STRING",
+    "defaultValue" : null,
+    "validation" : {
+      "required" : true,
+      "min" : null,
+      "max" : null,
+      "minLength" : null,
+      "maxLength" : null,
+      "minItems" : null,
+      "maxItems" : null,
+      "uniqueItems" : null,
+      "pattern" : null,
+      "enumValues" : null
+    },
+    "metadata" : {
+      "documentation::value" : "Username"
+    },
+    "placeholder" : "username",
+    "proposalDisplayNames" : null
+  } ],
+  "actions" : [ {
+    "family" : "Couchbase",
+    "name" : "healthCheck",
+    "type" : "healthcheck",
+    "displayName" : "Check connection",
+    "properties" : [ {
+      "path" : "configuration.dataset.connection",
+      "name" : "configuration.dataset.connection",
+      "displayName" : "configuration.dataset.connection",
+      "type" : "OBJECT",
+      "defaultValue" : null,
+      "validation" : null,
+      "metadata" : {
+        "ui::gridlayout::Advanced::value" : "connectTimeout",
+        "action::healthcheck" : "healthCheck",
+        "configurationtype::type" : "datastore",
+        "configurationtype::name" : "CouchbaseDataStore",
+        "ui::gridlayout::Main::value" : "bootstrapNodes|username|password",
+        "documentation::value" : "Couchbase connection",
+        "definition::parameter::index" : "0"
+      },
+      "placeholder" : "configuration.dataset.connection",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "configuration.dataset.connection.bootstrapNodes",
+      "name" : "bootstrapNodes",
+      "displayName" : "Bootstrap Nodes",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : {
+        "required" : true,
+        "min" : null,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "documentation::value" : "Bootstrap nodes"
+      },
+      "placeholder" : "bootstrapNodes",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "configuration.dataset.connection.connectTimeout",
+      "name" : "connectTimeout",
+      "displayName" : "Connect Timeout",
+      "type" : "NUMBER",
+      "defaultValue" : "20",
+      "validation" : {
+        "required" : null,
+        "min" : 5,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "documentation::value" : "Set the maximum number of seconds that a client will wait for opened a Bucket. Min value is 5 seconds."
+      },
+      "placeholder" : "connectTimeout",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "configuration.dataset.connection.password",
+      "name" : "password",
+      "displayName" : "Password",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : {
+        "required" : true,
+        "min" : null,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "ui::credential" : "true",
+        "documentation::value" : "Password"
+      },
+      "placeholder" : "password",
+      "proposalDisplayNames" : null
+    }, {
+      "path" : "configuration.dataset.connection.username",
+      "name" : "username",
+      "displayName" : "Username",
+      "type" : "STRING",
+      "defaultValue" : null,
+      "validation" : {
+        "required" : true,
+        "min" : null,
+        "max" : null,
+        "minLength" : null,
+        "maxLength" : null,
+        "minItems" : null,
+        "maxItems" : null,
+        "uniqueItems" : null,
+        "pattern" : null,
+        "enumValues" : null
+      },
+      "metadata" : {
+        "documentation::value" : "Username"
+      },
+      "placeholder" : "username",
+      "proposalDisplayNames" : null
+    } ]
+  } ]
+} ]
