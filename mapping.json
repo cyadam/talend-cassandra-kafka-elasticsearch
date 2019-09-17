@@ -1,6 +1,3 @@
-GET grand_debat/_mapping
-DELETE grand_debat
-PUT grand_debat
 PUT grand_debat/_mapping
 {
   "properties": {
